@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Mini Job Board
 
-## Getting Started
+A minimal job board application built with **Next.js** and **Supabase**. Users can register/login, post jobs, view jobs, and manage their job listings
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Setup Instructions
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run `npm install` to install all depedencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run `npm run dev` to run the application. The application will be available at `http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Approach
 
-To learn more about Next.js, take a look at the following resources:
+This project was built with a focus on clean code, usability, and fullstack functionality.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Authentication**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Authentication is handled by Supabase Auth to ensure users can only view and manage their own job listings.
 
-## Deploy on Vercel
+**CRUD Operations**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Designed core functionality around job Create, Read, Update, and Delete using Supabase.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Routing with App Router**
+
+Used Next.js App Router for modern file-based routing and layout composition
+
+**UI and UX**
+
+Used MUI (Material UI) for rapid UI development and simplicity with consistent theming.
+
+
+## Architecture Overview
+
+**Tech Stack**
+
+Next.js (App Router) – React framework for routing, server-side rendering, and static site generation.
+Supabase – Backend as a Service for Authentication and Database storage
+MUI (Material UI) – UI component library for consistent and accessible styling.
+TypeScript – For static typing and better developer experience.
+Tailwind CSS – Utility-first CSS
+
+**Project Structure**
+
+app/
+├── page.tsx              # Home page (Public page showing a list of job postings)
+├── auth/
+│   ├── page.tsx     	  # Users can sign up and log in
+├── dashboard/
+│   ├── page.tsx     	  # Post, view, edit, or delete jobs that the user posted
+├── jobs/
+│   ├── [id]/page.tsx     # Job detail page (dynamic route) - View full details of a specific job
+lib/
+├── supabase.ts           # Supabase client instance
