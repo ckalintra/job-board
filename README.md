@@ -54,3 +54,29 @@ app/
 lib/
 ├── supabase.ts           # Supabase client instance
 ```
+
+
+## Improvements
+
+**Authentication and Authorization**
+
+Add role-based access control (e.g. admin, companies, job seeker).
+Secure API routes with middlewares and server side validation to prevent unauthorized access or manipulation.
+
+**UX Polishing**
+
+Add toast notifications, loading skeletons, and better error states to enhance UX.
+Implement infinite scrolling or pagination for job listings.
+Implement filtering by tags, salary, location, etc.
+
+**API Architecture**
+
+Refactor Supabase calls into a dedicated API layer (lib/api) for cleaner separation of concerns and easier maintenance/testing.
+
+**Testing**
+
+Implement unit testing using jest or Vitest.
+
+**Performance**
+
+Utilize lazy loading for components and tune database queries if needed.
