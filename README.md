@@ -42,7 +42,7 @@ TypeScript – For static typing and better developer experience.
 Tailwind CSS – Utility-first CSS
 
 **Project Structure**
-
+```
 app/
 ├── page.tsx              # Home page (Public page showing a list of job postings)
 ├── auth/
@@ -53,3 +53,4 @@ app/
 │   ├── [id]/page.tsx     # Job detail page (dynamic route) - View full details of a specific job
 lib/
 ├── supabase.ts           # Supabase client instance
+```
